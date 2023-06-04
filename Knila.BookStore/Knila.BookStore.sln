@@ -1,0 +1,82 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.5.33516.290
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Knila.BookStore.Domain", "Knila.BookStore.Domain\Knila.BookStore.Domain.csproj", "{F22A08F6-B827-4779-A78A-7E39CD5EF998}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Core", "Core", "{FA558332-864A-4DB4-BE5B-B0D8A130ED94}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Repository", "Repository", "{D3508831-E198-4F67-88D0-DD65FE6CB760}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Service", "Service", "{DD31E8F5-76A5-4CF1-9D62-996C0E266F04}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Presentation", "Presentation", "{79D4F18B-E190-46A3-AE01-4C12A0260A21}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Test", "Test", "{3D4C327E-6944-4B4F-9BD8-00D2FFA7A15F}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Database", "Database", "{9AF9D606-4CEF-4E3C-9DF6-7BB121A2C989}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Knila.BookStore.Infrastructure", "Knila.BookStore.Infrastructure\Knila.BookStore.Infrastructure.csproj", "{18FB94B9-DE15-4679-BEC2-840A0F387520}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Knila.BookStore.RepositoryInterface", "Knila.BookStore.RepositoryInterface\Knila.BookStore.RepositoryInterface.csproj", "{6038D466-DEF0-45E0-93CF-CF7870B2EE08}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Knila.BookStore.RepositoryConcrete", "Knila.BookStore.RepositoryConcrete\Knila.BookStore.RepositoryConcrete.csproj", "{9B83492D-DC49-49B7-A17E-243FB9E75FBD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Knila.BookStore.ServiceInterface", "Knila.BookStore.ServiceInterface\Knila.BookStore.ServiceInterface.csproj", "{8FDD6A1D-AC36-4766-B46E-B6C567EABC2A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Knila.BookStore.ServiceConcrete", "Knila.BookStore.ServiceConcrete\Knila.BookStore.ServiceConcrete.csproj", "{B4907570-CFC2-48D6-AFA6-A0774300A307}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Knila.BookStore.UnitTest", "Knila.BookStore.UnitTest\Knila.BookStore.UnitTest.csproj", "{2DBF1030-C81D-4BD8-ABDC-70FB642C99E7}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F22A08F6-B827-4779-A78A-7E39CD5EF998}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F22A08F6-B827-4779-A78A-7E39CD5EF998}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F22A08F6-B827-4779-A78A-7E39CD5EF998}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F22A08F6-B827-4779-A78A-7E39CD5EF998}.Release|Any CPU.Build.0 = Release|Any CPU
+		{18FB94B9-DE15-4679-BEC2-840A0F387520}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{18FB94B9-DE15-4679-BEC2-840A0F387520}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{18FB94B9-DE15-4679-BEC2-840A0F387520}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{18FB94B9-DE15-4679-BEC2-840A0F387520}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6038D466-DEF0-45E0-93CF-CF7870B2EE08}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6038D466-DEF0-45E0-93CF-CF7870B2EE08}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6038D466-DEF0-45E0-93CF-CF7870B2EE08}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6038D466-DEF0-45E0-93CF-CF7870B2EE08}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9B83492D-DC49-49B7-A17E-243FB9E75FBD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9B83492D-DC49-49B7-A17E-243FB9E75FBD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9B83492D-DC49-49B7-A17E-243FB9E75FBD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9B83492D-DC49-49B7-A17E-243FB9E75FBD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8FDD6A1D-AC36-4766-B46E-B6C567EABC2A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8FDD6A1D-AC36-4766-B46E-B6C567EABC2A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8FDD6A1D-AC36-4766-B46E-B6C567EABC2A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8FDD6A1D-AC36-4766-B46E-B6C567EABC2A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B4907570-CFC2-48D6-AFA6-A0774300A307}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B4907570-CFC2-48D6-AFA6-A0774300A307}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B4907570-CFC2-48D6-AFA6-A0774300A307}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B4907570-CFC2-48D6-AFA6-A0774300A307}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2DBF1030-C81D-4BD8-ABDC-70FB642C99E7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2DBF1030-C81D-4BD8-ABDC-70FB642C99E7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2DBF1030-C81D-4BD8-ABDC-70FB642C99E7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2DBF1030-C81D-4BD8-ABDC-70FB642C99E7}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{F22A08F6-B827-4779-A78A-7E39CD5EF998} = {FA558332-864A-4DB4-BE5B-B0D8A130ED94}
+		{18FB94B9-DE15-4679-BEC2-840A0F387520} = {FA558332-864A-4DB4-BE5B-B0D8A130ED94}
+		{6038D466-DEF0-45E0-93CF-CF7870B2EE08} = {D3508831-E198-4F67-88D0-DD65FE6CB760}
+		{9B83492D-DC49-49B7-A17E-243FB9E75FBD} = {D3508831-E198-4F67-88D0-DD65FE6CB760}
+		{8FDD6A1D-AC36-4766-B46E-B6C567EABC2A} = {DD31E8F5-76A5-4CF1-9D62-996C0E266F04}
+		{B4907570-CFC2-48D6-AFA6-A0774300A307} = {DD31E8F5-76A5-4CF1-9D62-996C0E266F04}
+		{2DBF1030-C81D-4BD8-ABDC-70FB642C99E7} = {3D4C327E-6944-4B4F-9BD8-00D2FFA7A15F}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {D368CC7C-15F0-44AE-A327-655DD459CAB3}
+	EndGlobalSection
+EndGlobal
