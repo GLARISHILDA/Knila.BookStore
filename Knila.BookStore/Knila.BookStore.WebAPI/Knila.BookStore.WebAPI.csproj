@@ -1,15 +1,22 @@
-<Project Sdk="Microsoft.NET.Sdk">
+<Project Sdk="Microsoft.NET.Sdk.Web">
 
   <PropertyGroup>
     <TargetFramework>net7.0</TargetFramework>
-    <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
   </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="7.0.4" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.4.0" />
+  </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\Knila.BookStore.Domain\Knila.BookStore.Domain.csproj" />
     <ProjectReference Include="..\Knila.BookStore.Infrastructure\Knila.BookStore.Infrastructure.csproj" />
+    <ProjectReference Include="..\Knila.BookStore.RepositoryConcrete\Knila.BookStore.RepositoryConcrete.csproj" />
     <ProjectReference Include="..\Knila.BookStore.RepositoryInterface\Knila.BookStore.RepositoryInterface.csproj" />
+    <ProjectReference Include="..\Knila.BookStore.ServiceConcrete\Knila.BookStore.ServiceConcrete.csproj" />
     <ProjectReference Include="..\Knila.BookStore.ServiceInterface\Knila.BookStore.ServiceInterface.csproj" />
   </ItemGroup>
 

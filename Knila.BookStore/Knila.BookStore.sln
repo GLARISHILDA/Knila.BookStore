@@ -33,6 +33,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Knila.BookStore.ServiceConc
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Knila.BookStore.UnitTest", "Knila.BookStore.UnitTest\Knila.BookStore.UnitTest.csproj", "{2DBF1030-C81D-4BD8-ABDC-70FB642C99E7}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Knila.BookStore.WebAPI", "Knila.BookStore.WebAPI\Knila.BookStore.WebAPI.csproj", "{C662F91A-D294-4A90-A676-76FACFCF1191}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -67,6 +69,10 @@ Global
 		{2DBF1030-C81D-4BD8-ABDC-70FB642C99E7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2DBF1030-C81D-4BD8-ABDC-70FB642C99E7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2DBF1030-C81D-4BD8-ABDC-70FB642C99E7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C662F91A-D294-4A90-A676-76FACFCF1191}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C662F91A-D294-4A90-A676-76FACFCF1191}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C662F91A-D294-4A90-A676-76FACFCF1191}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C662F91A-D294-4A90-A676-76FACFCF1191}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -79,6 +85,7 @@ Global
 		{8FDD6A1D-AC36-4766-B46E-B6C567EABC2A} = {DD31E8F5-76A5-4CF1-9D62-996C0E266F04}
 		{B4907570-CFC2-48D6-AFA6-A0774300A307} = {DD31E8F5-76A5-4CF1-9D62-996C0E266F04}
 		{2DBF1030-C81D-4BD8-ABDC-70FB642C99E7} = {3D4C327E-6944-4B4F-9BD8-00D2FFA7A15F}
+		{C662F91A-D294-4A90-A676-76FACFCF1191} = {79D4F18B-E190-46A3-AE01-4C12A0260A21}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {D368CC7C-15F0-44AE-A327-655DD459CAB3}
