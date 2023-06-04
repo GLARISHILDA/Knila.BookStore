@@ -1,7 +1,7 @@
 # Knila.BookStore
 .Net Core Developer Assessment 
 
-**DB Connection String** > 
+**DB Connection String** > Go to Server Explorer > Click on connect to Database > Data Source : Microsoft SQL Server Database File > Datasource File Name : Extract the project folder , reach the path till the Databse \ .mdf file Open. Then Copy and paste the connection String in the field of SQLConnectionString in appsettings.json file under Web API Project.
 
 **BookAPI** > Using n-Tier Architecture which is having Model and Controller
 
@@ -22,6 +22,7 @@ Controller, Service Layer, Repository Layer are using **Dependency Injection (Au
 
 **Why we are using Autofac** > Service Layer, Repository Layer, Log files logging is automatically taken care by the interceptor
 
+**Test Data** > Used NBuilder and Faker to produce the test data.
 
 **AutoMapper** > Is used to map the Domain Model and View Model and Vice Versa
 
