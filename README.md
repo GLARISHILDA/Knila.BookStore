@@ -1,27 +1,28 @@
 # Knila.BookStore
 .Net Core Developer Assessment 
-DB Connection String > 
 
-BookAPI > Using n-Tier Architecture which is having Model and Controller
+**DB Connection String** > 
 
-Domain Layer > Has the business model w.r.to Database table and stored procedure return type
+**BookAPI** > Using n-Tier Architecture which is having Model and Controller
 
-Infrastructure Layer > Has the common services, methods, extensions and logs
+**Domain Layer** > Has the business model w.r.to Database table and stored procedure return type
 
-Service Layer > Has the business Logic also get the data repository and send it to Controller
+**Infrastructure Layer** > Has the common services, methods, extensions and logs
 
-Repository Layer > It communicates with Database using Dapper Micro ORM
+**Service Layer** > Has the business Logic also get the data repository and send it to Controller
 
-Controller > Get and Post the data as JSON 
+**Repository Layer** > It communicates with Database using Dapper Micro ORM
 
-Database Folder > Has the mdf file which is having the SQL Server local DB
+**Controller** > Get and Post the data as JSON 
 
-
-Controller, Service Layer, Repository Layer are using Dependency Injection (Autofac) for the loosely coupled logic and components
-
-Why we are using Autofac > Service Layer, Repository Layer, Log files logging is automatically taken care by the interceptor
+**Database Folder** > Has the mdf file which is having the SQL Server local DB
 
 
-AutoMapper > Is used to map the Domain Model and View Model and Vice Versa
+Controller, Service Layer, Repository Layer are using **Dependency Injection (Autofac)** for the loosely coupled logic and components
 
-nlog > Is used for Log files logging
+**Why we are using Autofac** > Service Layer, Repository Layer, Log files logging is automatically taken care by the interceptor
+
+
+**AutoMapper** > Is used to map the Domain Model and View Model and Vice Versa
+
+**nlog** > Is used for Log files logging
