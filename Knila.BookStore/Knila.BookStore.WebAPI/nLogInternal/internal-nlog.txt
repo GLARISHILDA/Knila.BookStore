@@ -108,3 +108,53 @@
    at NLog.Internal.PropertyHelper.CheckRequiredParameters(Object o)
    at NLog.LayoutRenderers.LayoutRenderer.Initialize()
 2023-06-04 17:18:42.3575 Info Validating config: TargetNames=LogFileAsync, ConfigItems=43, FilePath=C:\Users\vijir\githubsource\Knila.BookStore\Knila.BookStore\Knila.BookStore.WebAPI\bin\Debug\net7.0\NLog.config
+2023-06-04 17:26:27.1728 Info Message Template Auto Format enabled
+2023-06-04 17:26:27.1778 Info Loading assembly: NLog.Web.AspNetCore
+2023-06-04 17:26:27.2112 Info Registered target NLog.Targets.FileTarget(Name=allfile)
+2023-06-04 17:26:27.2112 Info Registered target NLog.Targets.Wrappers.BufferingTargetWrapper(Name=dbAsync)
+2023-06-04 17:26:27.2112 Info Registered target NLog.Targets.Wrappers.AsyncTargetWrapper(Name=LogFileAsync)
+2023-06-04 17:26:27.2239 Info Validating config: TargetNames=LogFileAsync, ConfigItems=43, FilePath=C:\Users\vijir\githubsource\Knila.BookStore\Knila.BookStore\Knila.BookStore.WebAPI\bin\Debug\net7.0\NLog.config
+2023-06-04 17:26:27.2239 Error Exception in layout renderer initialization. Exception: NLog.NLogConfigurationException: Required parameter 'Item' on 'Layout Renderer: ${aspnet-httpcontext-item}' was not specified.
+   at NLog.Internal.PropertyHelper.CheckRequiredParameters(Object o)
+   at NLog.LayoutRenderers.LayoutRenderer.Initialize()
+2023-06-04 17:26:27.6075 Info Validating config: TargetNames=LogFileAsync, ConfigItems=43, FilePath=C:\Users\vijir\githubsource\Knila.BookStore\Knila.BookStore\Knila.BookStore.WebAPI\bin\Debug\net7.0\NLog.config
+2023-06-04 20:01:39.2582 Info Message Template Auto Format enabled
+2023-06-04 20:01:39.2582 Info Loading assembly: NLog.Web.AspNetCore
+2023-06-04 20:01:39.3400 Info Registered target NLog.Targets.FileTarget(Name=allfile)
+2023-06-04 20:01:39.3400 Info Registered target NLog.Targets.Wrappers.BufferingTargetWrapper(Name=dbAsync)
+2023-06-04 20:01:39.3400 Info Registered target NLog.Targets.Wrappers.AsyncTargetWrapper(Name=LogFileAsync)
+2023-06-04 20:01:39.3701 Info Validating config: TargetNames=LogFileAsync, ConfigItems=43, FilePath=C:\Users\vijir\githubsource\Knila.BookStore\Knila.BookStore\Knila.BookStore.WebAPI\bin\Debug\net7.0\NLog.config
+2023-06-04 20:01:39.3941 Error Exception in layout renderer initialization. Exception: NLog.NLogConfigurationException: Required parameter 'Item' on 'Layout Renderer: ${aspnet-httpcontext-item}' was not specified.
+   at NLog.Internal.PropertyHelper.CheckRequiredParameters(Object o)
+   at NLog.LayoutRenderers.LayoutRenderer.Initialize()
+2023-06-04 20:01:39.9572 Info Validating config: TargetNames=LogFileAsync, ConfigItems=43, FilePath=C:\Users\vijir\githubsource\Knila.BookStore\Knila.BookStore\Knila.BookStore.WebAPI\bin\Debug\net7.0\NLog.config
+2023-06-04 20:06:00.6797 Info Message Template Auto Format enabled
+2023-06-04 20:06:00.6947 Info Loading assembly: NLog.Web.AspNetCore
+2023-06-04 20:06:00.7700 Info Registered target NLog.Targets.FileTarget(Name=allfile)
+2023-06-04 20:06:00.7700 Info Registered target NLog.Targets.Wrappers.BufferingTargetWrapper(Name=dbAsync)
+2023-06-04 20:06:00.7700 Info Registered target NLog.Targets.Wrappers.AsyncTargetWrapper(Name=LogFileAsync)
+2023-06-04 20:06:00.8040 Info Validating config: TargetNames=LogFileAsync, ConfigItems=43, FilePath=C:\Users\vijir\githubsource\Knila.BookStore\Knila.BookStore\Knila.BookStore.WebAPI\bin\Debug\net7.0\NLog.config
+2023-06-04 20:06:00.8305 Error Exception in layout renderer initialization. Exception: NLog.NLogConfigurationException: Required parameter 'Item' on 'Layout Renderer: ${aspnet-httpcontext-item}' was not specified.
+   at NLog.Internal.PropertyHelper.CheckRequiredParameters(Object o)
+   at NLog.LayoutRenderers.LayoutRenderer.Initialize()
+2023-06-04 20:06:01.5139 Info Validating config: TargetNames=LogFileAsync, ConfigItems=43, FilePath=C:\Users\vijir\githubsource\Knila.BookStore\Knila.BookStore\Knila.BookStore.WebAPI\bin\Debug\net7.0\NLog.config
+2023-06-04 20:18:02.2687 Info Message Template Auto Format enabled
+2023-06-04 20:18:02.2793 Info Loading assembly: NLog.Web.AspNetCore
+2023-06-04 20:18:02.3695 Info Registered target NLog.Targets.FileTarget(Name=allfile)
+2023-06-04 20:18:02.3695 Info Registered target NLog.Targets.Wrappers.BufferingTargetWrapper(Name=dbAsync)
+2023-06-04 20:18:02.3695 Info Registered target NLog.Targets.Wrappers.AsyncTargetWrapper(Name=LogFileAsync)
+2023-06-04 20:18:02.4017 Info Validating config: TargetNames=LogFileAsync, ConfigItems=43, FilePath=C:\Users\vijir\githubsource\Knila.BookStore\Knila.BookStore\Knila.BookStore.WebAPI\bin\Debug\net7.0\NLog.config
+2023-06-04 20:18:02.4273 Error Exception in layout renderer initialization. Exception: NLog.NLogConfigurationException: Required parameter 'Item' on 'Layout Renderer: ${aspnet-httpcontext-item}' was not specified.
+   at NLog.Internal.PropertyHelper.CheckRequiredParameters(Object o)
+   at NLog.LayoutRenderers.LayoutRenderer.Initialize()
+2023-06-04 20:18:02.9922 Info Validating config: TargetNames=LogFileAsync, ConfigItems=43, FilePath=C:\Users\vijir\githubsource\Knila.BookStore\Knila.BookStore\Knila.BookStore.WebAPI\bin\Debug\net7.0\NLog.config
+2023-06-04 20:20:32.2413 Info Message Template Auto Format enabled
+2023-06-04 20:20:32.2413 Info Loading assembly: NLog.Web.AspNetCore
+2023-06-04 20:20:32.3279 Info Registered target NLog.Targets.FileTarget(Name=allfile)
+2023-06-04 20:20:32.3279 Info Registered target NLog.Targets.Wrappers.BufferingTargetWrapper(Name=dbAsync)
+2023-06-04 20:20:32.3279 Info Registered target NLog.Targets.Wrappers.AsyncTargetWrapper(Name=LogFileAsync)
+2023-06-04 20:20:32.3553 Info Validating config: TargetNames=LogFileAsync, ConfigItems=43, FilePath=C:\Users\vijir\githubsource\Knila.BookStore\Knila.BookStore\Knila.BookStore.WebAPI\bin\Debug\net7.0\NLog.config
+2023-06-04 20:20:32.3884 Error Exception in layout renderer initialization. Exception: NLog.NLogConfigurationException: Required parameter 'Item' on 'Layout Renderer: ${aspnet-httpcontext-item}' was not specified.
+   at NLog.Internal.PropertyHelper.CheckRequiredParameters(Object o)
+   at NLog.LayoutRenderers.LayoutRenderer.Initialize()
+2023-06-04 20:20:33.0044 Info Validating config: TargetNames=LogFileAsync, ConfigItems=43, FilePath=C:\Users\vijir\githubsource\Knila.BookStore\Knila.BookStore\Knila.BookStore.WebAPI\bin\Debug\net7.0\NLog.config

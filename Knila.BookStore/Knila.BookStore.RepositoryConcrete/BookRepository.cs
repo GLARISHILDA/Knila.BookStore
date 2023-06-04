@@ -16,7 +16,7 @@ namespace Knila.BookStore.RepositoryConcrete
             this._dapperConnectionProvider = dapperConnectionProvider;
         }
 
-        public async Task<List<Book>> GetAllBookDetailsSort1Async()
+        public async Task<List<Book>> GetAllBookDetailsAsync()
         {
             List<Book> books = new List<Book>();
 
@@ -31,11 +31,6 @@ namespace Knila.BookStore.RepositoryConcrete
             }
 
             return books;
-        }
-
-        public Task<List<Book>> GetAllBookDetailsSort2Async()
-        {
-            throw new NotImplementedException();
         }
 
         public async Task LoadBookDataAsync(List<Book> books)
@@ -67,6 +62,20 @@ namespace Knila.BookStore.RepositoryConcrete
                     books = table.AsTableValuedParameter("T_Book")
                 }, commandType: CommandType.StoredProcedure);
             }
+        }
+
+        public async Task<double> GetTotalBookPriceAsync()
+        {
+            double sumOfBookPrice = 0.00;
+
+            string sql = "select ISNULL (sum (price),0.00) SumOfBookPrice from book";
+
+            using (var connection = this._dapperConnectionProvider.Connect())
+            {
+                sumOfBookPrice = await connection
+                                 .QueryFirstOrDefaultAsync<double>(sql, commandType: System.Data.CommandType.Text);
+            }
+            return sumOfBookPrice;
         }
     }
 }

@@ -22,7 +22,10 @@ namespace Knila.BookStore.WebAPI
             builder.Services.AddControllers(options =>
             {
                 options.Filters.Add(typeof(LoggingActionFilter));
-            });
+            }).AddJsonOptions(options =>
+                {
+                    options.JsonSerializerOptions.PropertyNamingPolicy = null;
+                }); ;
 
             // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
             builder.Services.AddEndpointsApiExplorer();
