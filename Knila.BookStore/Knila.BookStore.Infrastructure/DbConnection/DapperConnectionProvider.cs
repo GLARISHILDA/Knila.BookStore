@@ -1,4 +1,4 @@
-﻿using Castle.Core.Configuration;
+﻿using Microsoft.Extensions.Configuration;
 using System;
 using System.Collections.Generic;
 using System.Data;
