@@ -27,3 +27,7 @@ Controller, Service Layer, Repository Layer are using **Dependency Injection (Au
 **AutoMapper** > Is used to map the Domain Model and View Model and Vice Versa
 
 **nlog** > Is used for Log files logging
+
+**LoggingActionFilter** > Is used to create the log files automatically for all the **controllers** for the request and response.
+
+**LogInterceptor** > Is used to create the log files automatically for all the Service and Repository class's methods.
