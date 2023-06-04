@@ -1,4 +1,5 @@
-﻿using Knila.BookStore.Domain;
+﻿using FizzWare.NBuilder;
+using Knila.BookStore.Domain;
 using Knila.BookStore.Infrastructure.DbConnection;
 using Knila.BookStore.RepositoryInterface;
 using Knila.BookStore.ServiceInterface;
@@ -31,6 +32,20 @@ namespace Knila.BookStore.ServiceConcrete
         public Task<List<Book>> GetAllBookDetailsSort2Async()
         {
             throw new NotImplementedException();
+        }
+
+        public async Task LoadBookDataAsync(int count)
+        {
+            List<Book> books = Builder<Book>.CreateListOfSize(count)
+                                .All()
+                                .With(p => p.Publisher = Faker.Lorem.Word())
+                                .With(p => p.AuthorLastName = Faker.Name.LastName())
+                                .With(p => p.AuthorFirstName = Faker.Name.FirstName())
+                                .With(p => p.Title = Faker.Lorem.Word())
+                                .With(p => p.Price = Faker.Number.RandomNumber(500, 9999))
+                                .Build()
+                                .ToList();
+            await this._bookRepository.LoadBookDataAsync(books);
         }
     }
 }

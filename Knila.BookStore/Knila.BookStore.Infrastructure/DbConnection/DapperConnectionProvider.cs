@@ -5,6 +5,7 @@ using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace Knila.BookStore.Infrastructure.DbConnection
 {
@@ -15,11 +16,11 @@ namespace Knila.BookStore.Infrastructure.DbConnection
 
         public DapperConnectionProvider(IConfiguration configuration)
         {
-            _configuration = configuration;
-            _connectionString = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=C:\\Users\\vijir\\githubsource\\Knila.BookStore\\Knila.BookStore\\Database\\KnilaBookStore.mdf;Integrated Security=True;Connect Timeout=30";
+            this._configuration = configuration;
+            this._connectionString = this._configuration["SQLConnectionString"];
         }
 
         public IDbConnection Connect()
-            => new Microsoft.Data.SqlClient.SqlConnection(_connectionString);
+            => new Microsoft.Data.SqlClient.SqlConnection(this._connectionString);
     }
 }

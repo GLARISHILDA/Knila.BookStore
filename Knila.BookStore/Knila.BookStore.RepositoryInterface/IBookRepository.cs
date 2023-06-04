@@ -7,5 +7,7 @@ namespace Knila.BookStore.RepositoryInterface
         Task<List<Book>> GetAllBookDetailsSort1Async();
 
         Task<List<Book>> GetAllBookDetailsSort2Async();
+
+        Task LoadBookDataAsync(List<Book> books);
     }
 }

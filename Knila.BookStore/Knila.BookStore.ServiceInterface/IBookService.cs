@@ -7,5 +7,7 @@ namespace Knila.BookStore.ServiceInterface
         Task<List<Book>> GetAllBookDetailsSort1Async();
 
         Task<List<Book>> GetAllBookDetailsSort2Async();
+
+        Task LoadBookDataAsync(int count);
     }
 }
