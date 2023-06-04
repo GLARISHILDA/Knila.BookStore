@@ -18,6 +18,8 @@ namespace Knila.BookStore.WebAPI.IOC
         {
         }
 
+        // Corresponding Repository related with Interface and Concrete
+        // Log Interceptor Automatically attached to the Interceptor Methods
         protected override void Load(ContainerBuilder builder)
         {
             builder

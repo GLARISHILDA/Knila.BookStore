@@ -9,6 +9,7 @@ using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace Knila.BookStore.Infrastructure.DbConnection
 {
+    // Dapper Class for Data Access to Enable SQL Connection String
     public class DapperConnectionProvider : IDapperConnectionProvider
     {
         private readonly IConfiguration _configuration;

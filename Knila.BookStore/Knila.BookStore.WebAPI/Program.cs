@@ -41,8 +41,8 @@ namespace Knila.BookStore.WebAPI
                     .ConfigureContainer<ContainerBuilder>(builder =>
                     {
                         builder.RegisterInstance<IConfiguration>(configuration);
-                        builder.Register(c => new LogInterceptor(logger)).SingleInstance();
-                        builder.RegisterType<DapperConnectionProvider>().As<IDapperConnectionProvider>();
+                        builder.Register(c => new LogInterceptor(logger)).SingleInstance(); // Logging Service Layer and Repository Layer Register
+                        builder.RegisterType<DapperConnectionProvider>().As<IDapperConnectionProvider>(); // Inject DB Connection to Repository Layer
                         builder.RegisterModule(new ServiceIOCModule());
                         builder.RegisterModule(new RepositoryIOCModule());
                     });
@@ -59,6 +59,12 @@ namespace Knila.BookStore.WebAPI
                 app.UseSwagger();
                 app.UseSwaggerUI();
             }
+
+            app.UseCors(builder => builder
+            .AllowAnyHeader()
+            .AllowAnyMethod()
+            .SetIsOriginAllowed((host) => true)
+            .AllowCredentials());
 
             app.UseHttpsRedirection();
 
