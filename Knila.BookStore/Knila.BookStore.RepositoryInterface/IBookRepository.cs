@@ -9,5 +9,7 @@ namespace Knila.BookStore.RepositoryInterface
         Task LoadBookDataAsync(List<Book> books);
 
         Task<double> GetTotalBookPriceAsync();
+
+        Task<int> GetTotalNumberOfBooksAsync();
     }
 }

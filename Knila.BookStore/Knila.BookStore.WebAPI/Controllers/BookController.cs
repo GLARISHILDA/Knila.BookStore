@@ -74,5 +74,16 @@ namespace Knila.BookStore.WebAPI.Controllers
             sumOfBookPrice = await this._bookService.GetTotalBookPriceAsync();
             return this.Ok(sumOfBookPrice);
         }
+
+        [HttpGet]
+        [Route("GetTotalNumberOfBooks")]
+        [AllowAnonymous]
+        [ProducesResponseType(StatusCodes.Status200OK, Type = typeof(int))]
+        public async Task<IActionResult> TotalNumberOfBooksAsync()
+        {
+            int sumOfBooks = 0;
+            sumOfBooks = await this._bookService.GetTotalNumberOfBooksAsync();
+            return this.Ok(sumOfBooks);
+        }
     }
 }
