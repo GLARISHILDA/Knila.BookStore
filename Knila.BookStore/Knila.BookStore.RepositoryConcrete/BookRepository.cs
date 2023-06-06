@@ -82,7 +82,7 @@ namespace Knila.BookStore.RepositoryConcrete
         {
             int sumOfBooks = 0;
 
-            string sql = "select ISNULL (sum (BookId),0) SumOfBooks from book";
+            string sql = "select ISNULL (count (BookId),0) SumOfBooks from book";
 
             using (var connection = this._dapperConnectionProvider.Connect())
             {
