@@ -91,5 +91,19 @@ namespace Knila.BookStore.RepositoryConcrete
             }
             return sumOfBooks;
         }
+
+        public async Task<string> GetLast5BookDetailsAsync()
+        {
+            string last5Books = "";
+
+            string sql = "select TOP (5) * from Book as last5Books  order by BookId DESC";
+
+            using (var connection = this._dapperConnectionProvider.Connect())
+            {
+                last5Books = await connection
+                                 .QueryFirstOrDefaultAsync<string>(sql, commandType: System.Data.CommandType.Text);
+            }
+            return last5Books;
+        }
     }
 }

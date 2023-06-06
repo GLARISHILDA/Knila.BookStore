@@ -13,5 +13,7 @@ namespace Knila.BookStore.ServiceInterface
         Task<double> GetTotalBookPriceAsync();
 
         Task<int> GetTotalNumberOfBooksAsync();
+
+        Task<string> GetLast5BookDetailsAsync();
     }
 }

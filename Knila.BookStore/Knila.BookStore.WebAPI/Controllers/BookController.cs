@@ -85,5 +85,16 @@ namespace Knila.BookStore.WebAPI.Controllers
             sumOfBooks = await this._bookService.GetTotalNumberOfBooksAsync();
             return this.Ok(sumOfBooks);
         }
+
+        [HttpGet]
+        [Route("GetLast5BookDetails")]
+        [AllowAnonymous]
+        [ProducesResponseType(StatusCodes.Status200OK, Type = typeof(string))]
+        public async Task<IActionResult> GetLast5BookDetailsAsync()
+        {
+            string last5Books = "";
+            last5Books = await this._bookService.GetLast5BookDetailsAsync();
+            return this.Ok(last5Books);
+        }
     }
 }

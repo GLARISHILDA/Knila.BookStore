@@ -65,5 +65,10 @@ namespace Knila.BookStore.ServiceConcrete
         {
             return await this._bookRepository.GetTotalNumberOfBooksAsync();
         }
+
+        public async Task<string> GetLast5BookDetailsAsync()
+        {
+            return await this._bookRepository.GetLast5BookDetailsAsync();
+        }
     }
 }
