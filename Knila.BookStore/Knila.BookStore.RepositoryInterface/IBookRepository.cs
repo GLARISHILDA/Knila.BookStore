@@ -12,6 +12,6 @@ namespace Knila.BookStore.RepositoryInterface
 
         Task<int> GetTotalNumberOfBooksAsync();
 
-        Task<string> GetLast5BookDetailsAsync();
+        Task<List<Book>> GetLast5BookDetailsAsync();
     }
 }

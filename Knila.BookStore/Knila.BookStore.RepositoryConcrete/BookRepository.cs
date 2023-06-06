@@ -92,18 +92,21 @@ namespace Knila.BookStore.RepositoryConcrete
             return sumOfBooks;
         }
 
-        public async Task<string> GetLast5BookDetailsAsync()
+        public async Task<List<Book>> GetLast5BookDetailsAsync()
         {
-            string last5Books = "";
+            List<Book> books = new List<Book>();
 
-            string sql = "select TOP (5) * from Book as last5Books  order by BookId DESC";
+            string sql = "[dbo].[P_GetLast5BookDetails]";
 
             using (var connection = this._dapperConnectionProvider.Connect())
             {
-                last5Books = await connection
-                                 .QueryFirstOrDefaultAsync<string>(sql, commandType: System.Data.CommandType.Text);
+                var booksTemp = await connection
+                                 .QueryAsync<Book>(sql, commandType: System.Data.CommandType.StoredProcedure);
+
+                books = booksTemp.ToList();
             }
-            return last5Books;
+
+            return books;
         }
     }
 }
