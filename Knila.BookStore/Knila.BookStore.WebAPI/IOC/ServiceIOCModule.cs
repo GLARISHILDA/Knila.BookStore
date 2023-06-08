@@ -15,6 +15,12 @@ namespace Knila.BookStore.WebAPI.IOC
         protected override void Load(ContainerBuilder builder)
         {
             builder
+                .RegisterType<AuthenticationService>().As<IAuthenticationService>()
+                 .InstancePerLifetimeScope()
+                 .EnableInterfaceInterceptors()
+                 .InterceptedBy(typeof(LogInterceptor));
+
+            builder
                  .RegisterType<BookService>().As<IBookService>()
                   .InstancePerLifetimeScope()
                   .EnableInterfaceInterceptors()

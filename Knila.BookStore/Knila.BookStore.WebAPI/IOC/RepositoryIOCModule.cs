@@ -28,6 +28,12 @@ namespace Knila.BookStore.WebAPI.IOC
             SqlInsightDbProvider.RegisterProvider();
 
             builder
+            .Register(b => this._sqlConnection.AsParallel<IAuthenticationRepository>())
+            .InstancePerLifetimeScope()
+            .EnableInterfaceInterceptors()
+                .InterceptedBy(typeof(LogInterceptor));
+
+            builder
             .Register(b => this._sqlConnection.AsParallel<IBookRepository>())
             .InstancePerLifetimeScope()
             .EnableInterfaceInterceptors()
