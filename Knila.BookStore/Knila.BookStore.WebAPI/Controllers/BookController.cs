@@ -26,7 +26,7 @@ namespace Knila.BookStore.WebAPI.Controllers
 
         [HttpGet]
         [Route("GetAllBookDetailsSort1")]
-        [AllowAnonymous]
+        [Authorize]
         [ProducesResponseType(StatusCodes.Status200OK, Type = typeof(List<BookViewModel>))]
         public async Task<IActionResult> GetAllBookDetailsSort1Async()
         {
