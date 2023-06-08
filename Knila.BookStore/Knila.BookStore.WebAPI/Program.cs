@@ -44,7 +44,7 @@ namespace Knila.BookStore.WebAPI
                         builder.Register(c => new LogInterceptor(logger)).SingleInstance(); // Logging Service Layer and Repository Layer Register
                         builder.RegisterType<DapperConnectionProvider>().As<IDapperConnectionProvider>(); // Inject DB Connection to Repository Layer
                         builder.RegisterModule(new ServiceIOCModule());
-                        builder.RegisterModule(new RepositoryIOCModule());
+                        builder.RegisterModule(new RepositoryIOCModule(configuration));
                     });
 
             builder.Services.AddAutoMapper(typeof(AutoMapperProfile)); // Service (Auto Mapper)
