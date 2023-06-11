@@ -8,6 +8,7 @@ using System.Threading.Tasks;
 
 namespace Knila.BookStore.RepositoryInterface
 {
+    //Add some comment
     public interface IAuthenticationRepository
     {
         [Sql(@"SELECT  * FROM dbo.[User]")]
