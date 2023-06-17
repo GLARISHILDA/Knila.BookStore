@@ -29,6 +29,24 @@ namespace Knila.BookStore.WebAPI.Controllers
             this._mapper = mapper;
         }
 
+        [HttpGet]
+        [Route("RegisterUser1")]
+        [AllowAnonymous]
+        [ProducesResponseType(StatusCodes.Status200OK, Type = typeof(string))]
+        public async Task<IActionResult> RegisterUser1()
+        {
+            return this.Ok("API is Up-Test");
+        }
+
+        [HttpGet]
+        [Route("RegisterUser2")]
+        [AllowAnonymous]
+        [ProducesResponseType(StatusCodes.Status200OK, Type = typeof(string))]
+        public async Task<IActionResult> RegisterUser2()
+        {
+            return this.Ok("API is up - RegisterUser2");
+        }
+
         [HttpPost]
         [Route("RegisterUser")]
         [AllowAnonymous]

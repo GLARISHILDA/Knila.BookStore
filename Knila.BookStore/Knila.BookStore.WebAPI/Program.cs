@@ -85,6 +85,11 @@ namespace Knila.BookStore.WebAPI
                 app.UseSwagger();
                 app.UseSwaggerUI();
             }
+            else
+            {
+                app.UseSwagger();
+                app.UseSwaggerUI();
+            }
 
             app.UseCors(builder => builder
             .AllowAnyHeader()
