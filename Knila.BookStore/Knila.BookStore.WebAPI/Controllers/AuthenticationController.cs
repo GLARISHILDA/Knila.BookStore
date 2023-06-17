@@ -35,7 +35,7 @@ namespace Knila.BookStore.WebAPI.Controllers
         [ProducesResponseType(StatusCodes.Status200OK, Type = typeof(string))]
         public async Task<IActionResult> RegisterUser1()
         {
-            return this.Ok("API is up");
+            return this.Ok("API is Up-Test");
         }
 
         [HttpGet]
