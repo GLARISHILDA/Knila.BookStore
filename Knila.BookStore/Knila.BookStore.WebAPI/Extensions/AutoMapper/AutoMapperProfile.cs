@@ -3,6 +3,7 @@
     using global::AutoMapper;
     using Knila.BookStore.Domain;
     using Knila.BookStore.WebAPI.Models;
+    using System.Net;
 
     public class AutoMapperProfile : Profile
 
@@ -13,6 +14,7 @@
             AllowNullDestinationValues = true;
 
             CreateMap<BookViewModel, Book>().ReverseMap();
+            CreateMap<IpAddressViewModel, IpAddress>().ReverseMap();
         }
     }
 }

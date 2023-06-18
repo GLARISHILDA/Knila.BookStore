@@ -20,6 +20,12 @@ namespace Knila.BookStore.WebAPI.IOC
                   .EnableInterfaceInterceptors()
                   .InterceptedBy(typeof(LogInterceptor));
 
+            builder
+                 .RegisterType<IpAddressService>().As<IIpAddressService>()
+                  .InstancePerLifetimeScope()
+                  .EnableInterfaceInterceptors()
+                  .InterceptedBy(typeof(LogInterceptor));
+
             base.Load(builder);
         }
     }

@@ -3,6 +3,7 @@ using Knila.BookStore.Domain;
 using Knila.BookStore.Infrastructure.DbConnection;
 using Knila.BookStore.RepositoryInterface;
 using Knila.BookStore.ServiceInterface;
+using System.Net;
 
 namespace Knila.BookStore.ServiceConcrete
 {

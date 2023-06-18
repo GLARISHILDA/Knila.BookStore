@@ -11,6 +11,12 @@
 		<Product>Knila.BookStore</Product>
 	</PropertyGroup>
 
+	<ItemGroup>
+	  <Compile Remove="Extentsion\**" />
+	  <EmbeddedResource Remove="Extentsion\**" />
+	  <None Remove="Extentsion\**" />
+	</ItemGroup>
+
 
 	<ItemGroup>
 		<PackageReference Include="Autofac.Extras.DynamicProxy" Version="6.0.1" />
