@@ -15,7 +15,9 @@
             AllowNullDestinationValues = true;
 
             CreateMap<BookViewModel, Book>().ReverseMap();
+
             CreateMap<IpAddressViewModel, IpAddress>().ReverseMap();
+
 
             #region Authentication
 
