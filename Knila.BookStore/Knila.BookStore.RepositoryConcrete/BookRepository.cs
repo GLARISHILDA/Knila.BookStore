@@ -77,5 +77,36 @@ namespace Knila.BookStore.RepositoryConcrete
             }
             return sumOfBookPrice;
         }
+
+        public async Task<int> GetTotalNumberOfBooksAsync()
+        {
+            int sumOfBooks = 0;
+
+            string sql = "select ISNULL (count (BookId),0) SumOfBooks from book";
+
+            using (var connection = this._dapperConnectionProvider.Connect())
+            {
+                sumOfBooks = await connection
+                                 .QueryFirstOrDefaultAsync<int>(sql, commandType: System.Data.CommandType.Text);
+            }
+            return sumOfBooks;
+        }
+
+        public async Task<List<Book>> GetLast5BookDetailsAsync()
+        {
+            List<Book> books = new List<Book>();
+
+            string sql = "[dbo].[P_GetLast5BookDetails]";
+
+            using (var connection = this._dapperConnectionProvider.Connect())
+            {
+                var booksTemp = await connection
+                                 .QueryAsync<Book>(sql, commandType: System.Data.CommandType.StoredProcedure);
+
+                books = booksTemp.ToList();
+            }
+
+            return books;
+        }
     }
 }

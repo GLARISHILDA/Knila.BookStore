@@ -9,6 +9,9 @@ using Knila.BookStore.Infrastructure.DbConnection;
 using NLog;
 using Knila.BookStore.Infrastructure.Logging;
 using Knila.BookStore.WebAPI.IOC;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.IdentityModel.Tokens;
+using System.Text;
 
 namespace Knila.BookStore.WebAPI
 {
@@ -44,10 +47,33 @@ namespace Knila.BookStore.WebAPI
                         builder.Register(c => new LogInterceptor(logger)).SingleInstance(); // Logging Service Layer and Repository Layer Register
                         builder.RegisterType<DapperConnectionProvider>().As<IDapperConnectionProvider>(); // Inject DB Connection to Repository Layer
                         builder.RegisterModule(new ServiceIOCModule());
-                        builder.RegisterModule(new RepositoryIOCModule());
+                        builder.RegisterModule(new RepositoryIOCModule(configuration));
                     });
 
             builder.Services.AddAutoMapper(typeof(AutoMapperProfile)); // Service (Auto Mapper)
+
+            builder.Services.AddAuthentication(options =>
+            {
+                options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
+                options.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
+                options.DefaultScheme = JwtBearerDefaults.AuthenticationScheme;
+            })
+    // Adding Jwt Bearer
+    .AddJwtBearer(options =>
+    {
+        options.SaveToken = true;
+        options.RequireHttpsMetadata = false;
+        options.TokenValidationParameters = new TokenValidationParameters()
+        {
+            ValidateIssuer = true,
+            ValidateAudience = true,
+            ValidAudience = "https://localhost:7282/",
+            ValidIssuer = "https://localhost:7282/",
+            IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes("eyJhbGciOiJIUzUxMiJ9.eyJSb2xlIjoiQWRtaW4iLCJJc3N1ZXIiOiJJc3N1ZXIiLCJVc2VybmFtZSI6IkphdmFJblVzZSIsImV4cCI6MTYzNjI4MDE5NCwiaWF0IjoxNjM2MjgwMTk0fQ.1Kv_-41VhLaf5QDkfu2tMgsUIGV_lZsWfaZlmSap55CSAz3fGHQ9Qzf0PmxAaUfractckzOS5bjoB9EaxRLVbQ")),
+            //ClockSkew = TimeSpan.Zero
+        };
+    });
+
             // NLog: Setup NLog for Dependency injection
             builder.Logging.ClearProviders();
             builder.Host.UseNLog();
@@ -55,6 +81,11 @@ namespace Knila.BookStore.WebAPI
 
             // Configure the HTTP request pipeline.
             if (app.Environment.IsDevelopment())
+            {
+                app.UseSwagger();
+                app.UseSwaggerUI();
+            }
+            else
             {
                 app.UseSwagger();
                 app.UseSwaggerUI();

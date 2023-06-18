@@ -26,7 +26,7 @@ namespace Knila.BookStore.WebAPI.Controllers
 
         [HttpGet]
         [Route("GetAllBookDetailsSort1")]
-        [AllowAnonymous]
+        [Authorize]
         [ProducesResponseType(StatusCodes.Status200OK, Type = typeof(List<BookViewModel>))]
         public async Task<IActionResult> GetAllBookDetailsSort1Async()
         {
@@ -73,6 +73,32 @@ namespace Knila.BookStore.WebAPI.Controllers
             double sumOfBookPrice = 0.00;
             sumOfBookPrice = await this._bookService.GetTotalBookPriceAsync();
             return this.Ok(sumOfBookPrice);
+        }
+
+        [HttpGet]
+        [Route("GetTotalNumberOfBooks")]
+        [AllowAnonymous]
+        [ProducesResponseType(StatusCodes.Status200OK, Type = typeof(int))]
+        public async Task<IActionResult> TotalNumberOfBooksAsync()
+        {
+            int sumOfBooks = 0;
+            sumOfBooks = await this._bookService.GetTotalNumberOfBooksAsync();
+            return this.Ok(sumOfBooks);
+        }
+
+        [HttpGet]
+        [Route("GetLast5BookDetails")]
+        [AllowAnonymous]
+        [ProducesResponseType(StatusCodes.Status200OK, Type = typeof(List<BookViewModel>))]
+        public async Task<IActionResult> GetLast5BookDetailsAsync()
+        {
+            List<Book> books = new List<Book>();
+            List<BookViewModel> booksViewModel = new List<BookViewModel>();
+            books = await this._bookService.GetLast5BookDetailsAsync();
+
+            booksViewModel = this._mapper.Map<List<BookViewModel>>(books);
+
+            return this.Ok(booksViewModel);
         }
     }
 }

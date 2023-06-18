@@ -1,5 +1,6 @@
 ﻿using Autofac;
 using Autofac.Extras.DynamicProxy;
+using Insight.Database;
 using Knila.BookStore.Infrastructure.Logging;
 using Knila.BookStore.RepositoryConcrete;
 using Knila.BookStore.RepositoryInterface;
@@ -14,16 +15,26 @@ namespace Knila.BookStore.WebAPI.IOC
         private readonly DbConnection _sqlConnection;
         private readonly string _lifeTime;
 
-        public RepositoryIOCModule()
+        public RepositoryIOCModule(IConfiguration configuration)
         {
+            string connectionString = configuration["SQLConnectionString"];
+            this._sqlConnection = new SqlConnection(connectionString);
         }
 
         // Corresponding Repository related with Interface and Concrete
         // Log Interceptor Automatically attached to the Interceptor Methods
         protected override void Load(ContainerBuilder builder)
         {
+            SqlInsightDbProvider.RegisterProvider();
+
             builder
-            .RegisterType<BookRepository>().As<IBookRepository>()
+            .Register(b => this._sqlConnection.AsParallel<IAuthenticationRepository>())
+            .InstancePerLifetimeScope()
+            .EnableInterfaceInterceptors()
+                .InterceptedBy(typeof(LogInterceptor));
+
+            builder
+            .Register(b => this._sqlConnection.AsParallel<IBookRepository>())
             .InstancePerLifetimeScope()
             .EnableInterfaceInterceptors()
                 .InterceptedBy(typeof(LogInterceptor));
