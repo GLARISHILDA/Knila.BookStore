@@ -16,6 +16,7 @@
 
             CreateMap<BookViewModel, Book>().ReverseMap();
 
+
             #region WebDomain
 
             CreateMap<WebDomainViewModel, WebDomain>().ReverseMap();
@@ -27,6 +28,10 @@
             CreateMap<Knila.BookStore.WebAPI.Models.Billing, Knila.BookStore.Domain.Billing>().ReverseMap();
 
             #endregion WebDomain
+
+            CreateMap<IpAddressViewModel, IpAddress>().ReverseMap();
+
+
 
             #region Authentication
 
