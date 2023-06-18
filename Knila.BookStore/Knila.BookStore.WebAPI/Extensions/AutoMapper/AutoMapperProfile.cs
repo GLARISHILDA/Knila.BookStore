@@ -16,6 +16,9 @@
 
             CreateMap<BookViewModel, Book>().ReverseMap();
 
+            CreateMap<IpAddressViewModel, IpAddress>().ReverseMap();
+
+
             #region Authentication
 
             CreateMap<RegisterUserViewModel, User>().ReverseMap();
