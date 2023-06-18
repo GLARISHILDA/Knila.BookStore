@@ -29,12 +29,12 @@ namespace Knila.BookStore.WebAPI.Controllers
         [Route("GetIPAddress")]
         [AllowAnonymous]
         [ProducesResponseType(StatusCodes.Status200OK, Type = typeof(IpAddressViewModel))]
-        public async Task<IActionResult> GetIPAddressAsync()
+        public async Task<IActionResult> GetIPAddressAsync(string ipaddress)
         {
             IpAddress ipAddress = new IpAddress();
             IpAddressViewModel ipAddressViewModel = new IpAddressViewModel();
 
-            ipAddress = await this._ipAddressService.GetIPAddressAsync("");
+            ipAddress = await this._ipAddressService.GetIPAddressAsync(ipaddress);
 
             ipAddressViewModel = this._mapper.Map<IpAddressViewModel>(ipAddress);
 
