@@ -16,7 +16,21 @@
 
             CreateMap<BookViewModel, Book>().ReverseMap();
 
+
+            #region WebDomain
+
+            CreateMap<WebDomainViewModel, WebDomain>().ReverseMap();
+
+            CreateMap<Knila.BookStore.WebAPI.Models.Registrar, Knila.BookStore.Domain.Registrar>().ReverseMap();
+            CreateMap<Knila.BookStore.WebAPI.Models.Registrant, Knila.BookStore.Domain.Registrant>().ReverseMap();
+            CreateMap<Knila.BookStore.WebAPI.Models.Admin, Knila.BookStore.Domain.Admin>().ReverseMap();
+            CreateMap<Knila.BookStore.WebAPI.Models.Tech, Knila.BookStore.Domain.Tech>().ReverseMap();
+            CreateMap<Knila.BookStore.WebAPI.Models.Billing, Knila.BookStore.Domain.Billing>().ReverseMap();
+
+            #endregion WebDomain
+
             CreateMap<IpAddressViewModel, IpAddress>().ReverseMap();
+
 
 
             #region Authentication
